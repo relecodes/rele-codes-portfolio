@@ -299,3 +299,254 @@ h2 {
         align-items: flex-start;
     }
 }
+
+/* =========================
+   RELE CODES PRICING
+========================= */
+
+.pricing-section {
+    padding: 90px 20px;
+    background: #f7f7f2;
+    color: #202820;
+}
+
+.pricing-container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.pricing-section .section-label {
+    margin-bottom: 12px;
+    color: #63815e;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    margin: 0 0 16px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    text-align: center;
+}
+
+.pricing-intro {
+    max-width: 620px;
+    margin: 0 auto 45px;
+    color: #62685f;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e6dc;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(25, 40, 25, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 38px rgba(25, 40, 25, 0.1);
+}
+
+.pricing-card.pricing-featured {
+    border: 2px solid #6f9568;
+}
+
+.pricing-tag {
+    margin: 0 0 12px;
+    color: #63815e;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.pricing-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.4rem;
+}
+
+.pricing-price {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.pricing-deposit {
+    margin: 8px 0 18px;
+    color: #63815e;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.pricing-description {
+    min-height: 75px;
+    color: #62685f;
+    line-height: 1.7;
+}
+
+.pricing-card ul {
+    display: grid;
+    gap: 12px;
+    margin: 15px 0 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.pricing-card li {
+    position: relative;
+    padding-left: 25px;
+    color: #3e473c;
+    line-height: 1.5;
+}
+
+.pricing-card li::before {
+    position: absolute;
+    left: 0;
+    color: #63815e;
+    content: "✓";
+    font-weight: 800;
+}
+
+.pricing-time {
+    margin-top: auto;
+    padding: 16px 0 20px;
+    color: #3e473c;
+    line-height: 1.6;
+}
+
+.pricing-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 18px;
+    background: #263d2a;
+    border: 2px solid #263d2a;
+    border-radius: 9px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pricing-button:hover {
+    background: #ffffff;
+    color: #263d2a;
+}
+
+.pricing-notes {
+    margin-top: 38px;
+    padding: 28px;
+    background: #edf0e8;
+    border-radius: 16px;
+}
+
+.pricing-notes h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.pricing-notes p {
+    margin-bottom: 13px;
+    color: #50584c;
+    line-height: 1.75;
+}
+
+.pricing-notes p:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-bottom {
+    padding-top: 48px;
+    text-align: center;
+}
+
+.pricing-bottom h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.pricing-bottom p {
+    margin-bottom: 22px;
+    color: #62685f;
+    line-height: 1.7;
+}
+
+.pricing-bottom .pricing-button {
+    width: auto;
+    min-width: 230px;
+}
+
+@media (max-width: 700px) {
+    .pricing-section {
+        padding: 65px 16px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .pricing-card {
+        padding: 24px;
+    }
+
+    .pricing-description {
+        min-height: auto;
+    }
+
+    .pricing-notes {
+        padding: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-card,
+    .pricing-button {
+        transition: none;
+    }
+
+    .pricing-card:hover {
+        transform: none;
+    }
+}
+
+/* Align the Pricing link with the hero buttons */
+.hero .pricing-link,
+.hero a[href="#pricing"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 53px;
+    padding: 0 18px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.hero .pricing-link:hover,
+.hero a[href="#pricing"]:hover {
+    color: #a7f3d0;
+    border-color: #374151;
+}
